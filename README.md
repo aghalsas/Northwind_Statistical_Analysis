@@ -3,83 +3,33 @@
 
 ## Introduction
 
-In this lesson, we'll review all the guidelines and specifications for the final project for Module 3.
+This is a fake dataset of the Northwind trading company. The data is in a SQL database that we query to get the information we need
 
-## Objectives
+# Objectives
 
-* Understand all required aspects of the Final Project for Module 3
-* Understand all required deliverables
-* Understand what constitutes a successful project
+The following are the questions we answer in this project by using hypothesis testing
 
-### Final Project Summary
+## Summary and Conclusions
 
-Another module down--you're half way there!
-
-<img src='https://raw.githubusercontent.com/learn-co-curriculum/dsc-mod-3-project/master/halfway-there.gif'>
-
-For the culmination of Module 3, you just need to complete the final project!
-
-### The Project
-
-For this project, you'll be working with the Northwind database--a free, open-source dataset created by Microsoft containing data from a fictional company. You probably remember the Northwind database from our section on Advanced SQL. Here's the schema for the Northwind database:
-
-<img src='https://raw.githubusercontent.com/learn-co-curriculum/dsc-mod-3-project/master/Northwind_ERD_updated.png'>
-
-The goal of this project is to test your ability to gather information from a real-world database and use your knowledge of statistical analysis and hypothesis testing to generate analytical insights that can be of value to the company.
-
-## The Deliverables
-
-The goal of your project is to query the database to get the data needed to perform a statistical analysis.  In this statistical analysis, you'll need to perform a hypothesis test (or perhaps several) to answer the following question:
-
-**_Does discount amount have a statistically significant effect on the quantity of a product in an order? If so, at what level(s) of discount?_**
-
-In addition to answering this question with a hypothesis test, you will also need to come up with **_at least 3 other hypotheses to test on your own_**.  These can by anything that you think could be imporant information for the company.
-
-For this hypothesis, be sure to specify both the **_null hypothesis_** and the **_alternative hypothesis_** for your question.  You should also specify if this is one-tail or a two-tail test.
-
-To complete this project, you will need to turn in the following 3 deliverables:
-
-1. A **_Jupyter Notebook_** containing any code you've written for this project.
-2. A **_[Blog Post](https://github.com/learn-co-curriculum/dsc-welcome-blogging)_**.
-3. An **_"Executive Summary" PowerPoint Presentation_** that explains the hypothesis tests you ran, your findings, and their relevance to company stakeholders.  
-
-### Jupyter Notebook Must-Haves
-
-For this project, your jupyter notebook should meet the following specifications:
-
-**_Organization/Code Cleanliness_**
-
-* The notebook should be well organized, easy to follow, and code is commented where appropriate.  
-<br>  
-    * Level Up: The notebook contains well-formatted, professional looking markdown cells explaining any substantial code. All functions have docstrings that act as professional-quality documentation.  
-<br>      
-* The notebook is written to technical audiences with a way to both understand your approach and reproduce your results. The target audience for this deliverable is other data scientists looking to validate your findings.  
-<br>    
-* Any SQL code written to source data should also be included.  
-
-**_Findings_**
-
-* Your notebook should clearly show how you arrived at your results for each hypothesis test, including how you calculated your p-values.   
-<br>
-* You should also include any other statistics that you find relevant to your analysis, such as effect size.
-
-### Blog Post Must-Haves
-
-Refer back to the [Blogging Guidelines](https://github.com/learn-co-curriculum/dsc-welcome-blogging) for the technical requirements and blog ideas.
+## Q1 Does discount amount have a statistically significant effect on the quantity of a product in an order? If so, at what level(s) of discount?
+ - Considering all products discounted items are drawn from a different distribution compared to undiscounted items at the 95% confidence level
+ - Considering individual discount levels, discounted products at 0.05, 0.15, 0.2, and 0.25 levels are drawn from a a different distribution compared to the undiscounted quantities and have higher means. There is no concrete distinction in the distributions between 0.05, 0.15, 0.2 and 0.25 levels. 0.1 discount level needs to have more data points for us to potentially reject the null hypothesis
+ - At the individual product level there is no evidence that discount levels matter, However that is most likely due to low statistics per product and per discount level.
+ 
+## Q2 Do sales get drawn from a different distribution every year? Does the month when the products were ordered matter? 
+ - The sales do not seem to depend on year and the quantities seem to be drawn from the same underlying distribution. Individual products also don't suggest a preferred year
+ - For overall sales the month of May shows a definite decrease in quantities purchased
 
 
-### Executive Summary Must-Haves
+## Q3 Is there a standout employee in terms of the distribution from which quantities sold are drawn ? Are there employees who are shipping their orders significantly late?
+ - There is insufficient evidence that the quantities sold between employees come from different distributions
+ - Employees 2,4,7,9 statistically have a bad record of shipping on time compared to Employee 5
 
-Your presentation should:
+## Q4 Are there regions that are growing or decreasing in overall sales ? Are there products that are growing or decreasing in overall sales
+ - All regions show a growth comparing year 2012 and 2014
+ - All products show a growth comparing year 2012 and 2014
 
-* Contain between 5-10 professional quality slides detailing:
-<br>  
-    * A high-level overview of your methodology  
-    <br>  
-    * The results of your hypothesis tests  
-    <br>  
-    * Any real-world recommendations you would like to make based on your findings (ask yourself--why should the executive team care about what you found? How can your findings help the company?)  
-    <br>  
-* Take no more than 5 minutes to present  
-<br>  
-* Avoid technical jargon and explain results in a clear, actionable way for non-technical audiences.  
+
+## Blog
+
+https://aghalsasi-datascience.blogspot.com/2020/01/northwind-dataset-statistical-analysis.html
